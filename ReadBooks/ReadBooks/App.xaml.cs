@@ -13,14 +13,14 @@ namespace ReadBooks
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage (new MainPage());
         }
 
         protected override void OnStart()
         {
             // Handle when your app starts
             AppCenter.Start("02890684-63a6-4782-9860-00ed6330ceea",
-                   typeof(Analytics), typeof(Crashes));
+                            typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()
