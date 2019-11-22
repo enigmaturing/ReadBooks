@@ -16,9 +16,18 @@ namespace ReadBooks
         public bool SaveBook()
         {
             // save to some db
-            AppCenterHelper.TrackEvent("book_saved");
-            Crashes.GenerateTestCrash();
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>
+            {
+                { "book_info", this.ToString() },
+                { "network", "Cellular" }
+            };
+            AppCenterHelper.TrackEvent("book_saved", keyValuePairs);
             return false;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name} - {Author}";
         }
     }
 }

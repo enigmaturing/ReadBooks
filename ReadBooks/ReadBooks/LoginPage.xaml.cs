@@ -22,7 +22,12 @@ namespace ReadBooks
             try
             {
                 // TODO: add login
-                AppCenterHelper.TrackEvent("logged_in");
+                Dictionary<string, string> keyValuePairs = new Dictionary<string, string>
+            {
+                { "user", "javier@javier.com" },
+                { "network", "WiFi" }
+            };
+                AppCenterHelper.TrackEvent("logged_in", keyValuePairs);
                 await Navigation.PopModalAsync(true);
             }
             catch (Exception exception)
