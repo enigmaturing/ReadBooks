@@ -6,8 +6,9 @@
              mc:Ignorable="d"
              x:Class="ReadBooks.LoginPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Login" Clicked="LoginButton_Clicked"></Button>
+        <StackLayout VerticalOptions="Center">
+            <Button Text="Login" Clicked="LoginButton_Clicked"
+                    BackgroundColor="#00B9F8"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
