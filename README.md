@@ -1,4 +1,4 @@
 # ReadBooks
 My repo for the Xamarin Course "Master CI/CD for Xamarin"
 
-[![Build status](https://build.appcenter.ms/v0.1/apps/a34bbab2-0cf3-463a-9460-168973372d6a/branches/dev/badge)](https://appcenter.ms)
+[![Build status](https://build.appcenter.ms/v0.1/apps/2206aebe-5beb-4722-9e97-c5bcabbbf684/branches/master/badge)](https://appcenter.ms)
