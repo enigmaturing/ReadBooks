@@ -19,7 +19,7 @@ namespace ReadBooks
         protected override void OnStart()
         {
             // Handle when your app starts
-            AppCenter.Start("02890684-63a6-4782-9860-00ed6330ceea",
+            AppCenter.Start("8f6b4bd2-9436-4362-a3f5-2306e81f5f0f",
                             typeof(Analytics), typeof(Crashes));
         }
 
