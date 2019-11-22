@@ -26,7 +26,13 @@ namespace ReadBooks
             }
             catch (Exception exception)
             {
-                AppCenterHelper.TrackError(exception);
+                Dictionary<string, string> keyValuePairs = new Dictionary<string, string>
+                {
+                    { "Signal", "Strong" },
+                    { "NewUser", "False" },
+                    { "WiFi", "On" }
+                };
+                AppCenterHelper.TrackError(exception, keyValuePairs);
             }
         }
     }
