@@ -16,11 +16,17 @@ namespace ReadBooks
             MainPage = new NavigationPage (new MainPage());
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
             // Handle when your app starts
             AppCenter.Start("8f6b4bd2-9436-4362-a3f5-2306e81f5f0f",
                             typeof(Analytics), typeof(Crashes));
+
+            bool didAppCrash = await Crashes.HasCrashedInLastSessionAsync();
+            if (didAppCrash)
+            {
+                await MainPage.DisplayAlert("Sorry", "It appears we had some issue there, sorry about that.", "It is ok!");
+            }
         }
 
         protected override void OnSleep()
