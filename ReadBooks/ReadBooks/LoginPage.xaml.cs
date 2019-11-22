@@ -21,7 +21,8 @@ namespace ReadBooks
         {
             try
             {
-                throw new Exception("An error ocurred when logging the user in.");
+                // TODO: add login
+                AppCenterHelper.TrackEvent("logged_in");
                 await Navigation.PopModalAsync(true);
             }
             catch (Exception exception)
